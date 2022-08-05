@@ -1,18 +1,12 @@
 import validator from "validator";
 import chalk from "chalk";
-
-const validateEmail = function (email: string): string {
-  const reuslt = validator.isEmail(email);
-  if (!reuslt) {
-    return chalk.bgRed.white(" Invalid email please check your email address ");
-  }
-  return chalk.bgGreenBright.white.bold(" Valid email address ");
-};
+import { add, printMe } from "./utils";
+import { validateEmail } from "./validate";
 
 const command = process.argv[2];
 
-if (command) {
-  console.log(validateEmail(command));
-}
+printMe();
+
+console.log(validateEmail("hello@gmail.com"));
 
 console.log(process.argv[2]);

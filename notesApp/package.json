@@ -19,6 +19,7 @@
     "chalk": "^5.0.1",
     "colors": "^1.4.0",
     "nodemon": "^2.0.19",
-    "validator": "^13.7.0"
+    "validator": "^13.7.0",
+    "yargs": "^17.5.1"
   }
 }

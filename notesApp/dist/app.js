@@ -5,6 +5,10 @@ const validateEmail = function (email) {
     if (!reuslt) {
         return chalk.bgRed.white(" Invalid email please check your email address ");
     }
-    return chalk.bgGreen.black.bold(" Valid email address ");
+    return chalk.bgGreenBright.white.bold(" Valid email address ");
 };
-console.log(validateEmail("pavandasgmail.com"));
+const command = process.argv[2];
+if (command) {
+    console.log(validateEmail(command));
+}
+console.log(process.argv[2]);
